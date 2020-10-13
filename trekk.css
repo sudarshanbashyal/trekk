@@ -1,0 +1,444 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Raleway', sans-serif;
+}
+
+.wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+}
+
+.wrapper .sidebar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 20%;
+  height: 100vh;
+  position: fixed;
+  background-color: #04396c;
+  padding: 2rem;
+  color: white;
+}
+
+.wrapper .sidebar .input {
+  margin-top: 50px;
+  border-bottom: 1px solid white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.wrapper .sidebar .input input {
+  border: none;
+  background-color: transparent;
+  width: 90%;
+  padding: 0.3rem 0rem;
+  color: white;
+  font-size: 1.2rem;
+}
+
+.wrapper .sidebar .input input:focus {
+  outline: none;
+}
+
+.wrapper .sidebar .input input::-webkit-input-placeholder {
+  color: white;
+}
+
+.wrapper .sidebar .input input:-ms-input-placeholder {
+  color: white;
+}
+
+.wrapper .sidebar .input input::-ms-input-placeholder {
+  color: white;
+}
+
+.wrapper .sidebar .input input::placeholder {
+  color: white;
+}
+
+.wrapper .sidebar .input .search {
+  width: 10%;
+}
+
+.wrapper .sidebar .socials {
+  margin-top: auto;
+}
+
+.wrapper .sidebar .socials a {
+  color: white;
+}
+
+.wrapper .sidebar .socials a i {
+  margin-right: 30px;
+  -webkit-transform: scale(2);
+          transform: scale(2);
+  cursor: pointer;
+  -webkit-transition: 0.1s;
+  transition: 0.1s;
+}
+
+.wrapper .sidebar .socials a:hover {
+  color: #fe4445;
+  -webkit-transform: scale(2);
+          transform: scale(2);
+}
+
+.wrapper .logo {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.wrapper .logo span {
+  color: #fe4445;
+  font-size: 4rem;
+}
+
+.wrapper .container {
+  width: 80%;
+  margin-left: auto;
+}
+
+.wrapper .container .desc-container {
+  width: 100%;
+  padding: 8rem 0rem 3rem 3rem;
+  display: block;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  position: relative;
+}
+
+.wrapper .container .desc-container::after {
+  content: "";
+  opacity: 0.1;
+  background: url(https://images.pexels.com/photos/4275892/pexels-photo-4275892.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);
+  background-position: center;
+  background-size: cover;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;
+}
+
+.wrapper .container .desc-container .description {
+  width: 45%;
+  height: 100%;
+  position: relative;
+  z-index: 2;
+}
+
+.wrapper .container .desc-container .description .heading {
+  font-size: 4rem;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  text-transform: capitalize;
+}
+
+.wrapper .container .desc-container .description P {
+  margin-bottom: 20px;
+  margin-top: 50px;
+}
+
+.wrapper .container .desc-container .description a {
+  color: black;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.wrapper .container .desc-container .description a:hover i {
+  margin-left: 10px;
+}
+
+.wrapper .container .desc-container .description a i {
+  color: #fe4445;
+  margin-left: 5px;
+  -webkit-transition: 0.15s;
+  transition: 0.15s;
+}
+
+.wrapper .container .desc-container .image {
+  position: relative;
+  z-index: 2;
+  width: 50%;
+  background-size: cover;
+  background-position: center;
+}
+
+.wrapper .container .details-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+  padding: 3rem;
+  margin-top: 50px;
+}
+
+.wrapper .container .details-container .map {
+  width: 47%;
+}
+
+.wrapper .container .details-container .details {
+  width: 47%;
+}
+
+.wrapper .container .details-container .details .heading {
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  font-weight: 800;
+  letter-spacing: 1px;
+  margin-bottom: 50px;
+}
+
+.wrapper .container .details-container .details ul {
+  list-style: none;
+}
+
+.wrapper .container .details-container .details ul li:not(:last-child) {
+  font-weight: 500;
+  width: 300px;
+  margin-bottom: 23px;
+  padding-bottom: 23px;
+  border-bottom: 1px solid #b3cde0;
+}
+
+.wrapper .container .details-container .details ul li:last-child {
+  font-weight: 500;
+  width: 300px;
+}
+
+.wrapper .container .graph-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+  padding: 3rem;
+  margin-top: 50px;
+}
+
+.wrapper .container .graph-container .weather-graph, .wrapper .container .graph-container .currency-graph {
+  width: 47%;
+}
+
+.wrapper .container .compare {
+  width: 100%;
+  margin-top: 50px;
+  padding: 3rem;
+  background-color: #b3cde0;
+}
+
+.wrapper .container .compare .compare-input {
+  border: none;
+  width: 200px;
+  border-bottom: 1px solid #04396c;
+  background-color: transparent;
+  padding: 0.3rem 0rem;
+  color: #04396c;
+  font-size: 1.2rem;
+}
+
+.wrapper .container .compare .compare-input:focus {
+  outline: none;
+}
+
+.wrapper .container .compare .compare-input::-webkit-input-placeholder {
+  color: #04396c;
+}
+
+.wrapper .container .compare .compare-input:-ms-input-placeholder {
+  color: #04396c;
+}
+
+.wrapper .container .compare .compare-input::-ms-input-placeholder {
+  color: #04396c;
+}
+
+.wrapper .container .compare .compare-input::placeholder {
+  color: #04396c;
+}
+
+.wrapper .container .compare button {
+  padding: 0.4rem 3rem;
+  font-size: 1.2rem;
+  background-color: #04396c;
+  color: #b3cde0;
+  border: none;
+  margin-left: 20px;
+  cursor: pointer;
+}
+
+.wrapper .container .compare .comparing-to {
+  text-transform: uppercase;
+  margin-top: 100px;
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+.wrapper .container .compare-graph-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+  padding: 3rem;
+  margin-bottom: 20px;
+}
+
+.wrapper .container .compare-graph-container .compare-weather-graph, .wrapper .container .compare-graph-container .compare-currency-graph {
+  width: 47%;
+}
+
+.wrapper .container .compare-details-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+  padding: 3rem;
+}
+
+.wrapper .container .compare-details-container .first-city-details, .wrapper .container .compare-details-container .second-city-details {
+  width: 47%;
+}
+
+.wrapper .container .compare-details-container .first-city-details ul, .wrapper .container .compare-details-container .second-city-details ul {
+  list-style: none;
+}
+
+.wrapper .container .compare-details-container .first-city-details ul li:not(:last-child), .wrapper .container .compare-details-container .second-city-details ul li:not(:last-child) {
+  font-weight: 500;
+  width: 300px;
+  margin-bottom: 23px;
+  padding-bottom: 23px;
+  border-bottom: 1px solid #b3cde0;
+}
+
+.wrapper .container .compare-details-container .first-city-details ul li:last-child, .wrapper .container .compare-details-container .second-city-details ul li:last-child {
+  font-weight: 500;
+  width: 300px;
+}
+
+@media screen and (max-width: 1300px) {
+  .wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .wrapper .sidebar {
+    height: auto;
+    width: 100%;
+    position: relative;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .wrapper .sidebar .logo, .wrapper .sidebar .socials {
+    width: 35%;
+  }
+  .wrapper .sidebar .input {
+    width: 30%;
+    top: 10%;
+    position: absolute;
+    left: 30%;
+  }
+  .wrapper .sidebar .socials {
+    top: 50%;
+    position: absolute;
+    left: 60%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+  .wrapper .container {
+    width: 100%;
+  }
+  .wrapper .container .desc-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding-right: 3rem;
+  }
+  .wrapper .container .desc-container .description, .wrapper .container .desc-container .image {
+    width: 100%;
+  }
+  .wrapper .container .desc-container .description {
+    margin-bottom: 20px;
+  }
+  .wrapper .container .desc-container .image {
+    height: 400px;
+    background-color: red;
+  }
+  .wrapper .container .details-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .wrapper .container .details-container .details {
+    margin-bottom: 40px;
+  }
+  .wrapper .container .details-container .map {
+    width: 100%;
+    height: 400px;
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+  }
+  .wrapper .container .graph-container, .wrapper .container .compare-graph-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .wrapper .container .graph-container .weather-graph, .wrapper .container .graph-container .currency-graph, .wrapper .container .graph-container .compare-weather-graph, .wrapper .container .graph-container .compare-currency-graph, .wrapper .container .compare-graph-container .weather-graph, .wrapper .container .compare-graph-container .currency-graph, .wrapper .container .compare-graph-container .compare-weather-graph, .wrapper .container .compare-graph-container .compare-currency-graph {
+    width: 100%;
+  }
+  .wrapper .container .graph-container .compare-weather-graph, .wrapper .container .compare-graph-container .compare-weather-graph {
+    margin-bottom: 50px;
+  }
+  .wrapper .container .graph-container .weather-graph, .wrapper .container .compare-graph-container .weather-graph {
+    margin-bottom: 50px;
+  }
+}
+/*# sourceMappingURL=trekk.css.map */

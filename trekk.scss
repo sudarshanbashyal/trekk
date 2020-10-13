@@ -1,0 +1,381 @@
+$blue:#04396c;
+$red:#fe4445;
+$light:#b3cde0;
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Raleway', sans-serif;
+}
+
+@mixin container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 3rem;
+}
+
+@mixin detail-list {
+    ul{
+        list-style: none;
+
+        li:not(:last-child){
+            font-weight: 500;
+            width: 300px;
+            margin-bottom: 23px;
+            padding-bottom: 23px;
+            border-bottom: 1px solid $light;
+        }
+
+        li:last-child{
+            font-weight: 500;
+            width: 300px;
+        }
+    }
+}
+
+.wrapper{
+    display: flex;
+    width: 100%;
+
+    // SIDEBAR
+    .sidebar{
+        display: flex;
+        flex-direction: column;
+        width: 20%;
+        height: 100vh;
+        position: fixed;
+        background-color: $blue;
+        padding: 2rem;
+        color: white;
+
+        .input{
+            margin-top: 50px;
+            border-bottom: 1px solid white;
+            display: flex;
+
+            input{
+                border: none;
+                background-color: transparent;
+                width: 90%;
+                padding: 0.3rem 0rem;
+                color: white;
+                font-size: 1.2rem;
+
+                &:focus{
+                    outline: none;
+                }
+
+                &::placeholder{
+                    color: white;
+                }
+            }
+            .search{
+                width: 10%;
+            }
+        }
+
+        .socials{
+            margin-top: auto;
+
+            a{
+                color: white;
+
+                i{
+                    margin-right: 30px;
+                    transform: scale(2);
+                    cursor: pointer;
+                    transition: 0.1s;
+                }
+
+                &:hover{
+                    color: $red;
+                    transform: scale(2);
+                }
+            }
+
+        }
+
+    }
+
+    .logo{
+        user-select: none;
+        font-size: 2.5rem;
+        font-weight: 600;
+        margin: 0;
+        span{
+            color: $red;
+            font-size: 4rem;
+        }
+        
+    }
+
+    // CONTENT SECTION
+
+    .container{
+        width: 80%;
+        margin-left: auto;
+
+        // DESCRIPTION CONTAINER
+        .desc-container{
+            width: 100%;
+            padding: 8rem 0rem 3rem 3rem;
+            display: block;
+            position: relative;
+            display: flex;
+            justify-content: space-between;
+            position: relative;
+
+            &::after{
+                content: "";
+                opacity: 0.1;
+                background: url(https://images.pexels.com/photos/4275892/pexels-photo-4275892.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);
+                background-position: center;
+                background-size: cover;
+                top: 0;
+                left: 0;
+                bottom: 0;
+                right: 0;
+                position: absolute;
+                z-index: -1;
+            }
+
+            .description{
+                width: 45%;
+                height: 100%;
+                position: relative;
+                z-index: 2;
+
+                .heading{
+                    font-size: 4rem;
+                    user-select: none;
+                    text-transform: capitalize;
+                }
+
+                P{
+                    margin-bottom: 20px;
+                    margin-top: 50px;
+                }
+
+                a{
+                    color: black;
+                    text-decoration: none;
+                    font-weight: 600;
+
+                    &:hover{
+
+                        i{
+                            margin-left: 10px;
+                        }
+                    }
+
+                    i{
+                        color: $red;
+                        margin-left: 5px;
+                        transition: 0.15s;
+                    }
+                }
+            }
+
+            .image{
+                position: relative;
+                z-index: 2;
+                width: 50%;
+                background-size: cover;
+                background-position: center;
+            }
+        }
+
+        // DETAILS CONTAINER
+        .details-container{
+            @include container;
+            margin-top: 50px;
+
+            .map{
+                width: 47%;
+
+            }
+
+            .details{
+                width: 47%;
+
+                .heading{
+                    font-size: 1.2rem;
+                    text-transform: uppercase;
+                    font-weight: 800;
+                    letter-spacing: 1px;
+                    margin-bottom: 50px;
+                }
+
+                @include detail-list;
+
+            }
+        }
+
+        .graph-container{
+            @include container;
+            margin-top: 50px;
+
+            .weather-graph,.currency-graph{
+                width: 47%;
+
+            }
+
+        }
+
+        .compare{
+            width: 100%;
+            margin-top: 50px;
+            padding: 3rem;
+            background-color: $light;
+
+            .compare-input{
+                border: none;
+                width:200px;
+                border-bottom: 1px solid $blue;
+                background-color: transparent;
+                padding: 0.3rem 0rem;
+                color: $blue;
+                font-size: 1.2rem;
+
+                &:focus{
+                    outline: none;
+                }
+
+                &::placeholder{
+                    color: $blue;
+                }
+            }
+
+            button{
+                padding: 0.4rem 3rem;
+                font-size: 1.2rem;
+                background-color: $blue;
+                color: $light;
+                border: none;
+                margin-left: 20px;
+                cursor: pointer;
+            }
+
+            .comparing-to{
+                text-transform: uppercase;
+                margin-top: 100px;
+                font-size: 1.8rem;
+                font-weight: 700;
+            }
+        }
+
+        .compare-graph-container{
+            @include container;
+            margin-bottom: 20px;
+
+            .compare-weather-graph,.compare-currency-graph{
+                width: 47%;
+
+            }
+
+        }
+
+        .compare-details-container{
+            @include container;
+
+            .first-city-details,.second-city-details{
+                width: 47%;
+                @include detail-list;
+
+
+            }
+        }
+        
+    }
+    
+}
+
+@media screen and(max-width:1300px){
+
+    .wrapper{
+        flex-direction: column;
+
+        .sidebar{
+            height: auto;
+            width: 100%;
+            position: relative;
+            flex-direction: row;
+            justify-content: space-between;
+
+            .logo,.socials{
+                width: 35%;
+            }
+
+            .input {
+                width: 30%;
+                top: 10%;
+                position: absolute;
+                left: 30%;
+            }
+
+            .socials{
+                top: 50%;
+                position: absolute;
+                left: 60%;
+                display: flex;
+                justify-content: flex-end;
+            }
+
+        }
+        .container{
+            width: 100%;
+
+            .desc-container{
+                flex-direction: column;
+                padding-right: 3rem;
+
+                .description,.image{
+                    width: 100%;
+                }
+
+                .description{
+                    margin-bottom: 20px;
+                }
+
+                .image{
+                    height: 400px;
+                    background-color: red;
+                }
+            }
+
+            .details-container{
+                flex-direction: column;
+        
+                .details{
+                    margin-bottom: 40px;
+                }
+        
+                .map{
+                    width: 100%;
+                    height: 400px;
+                    order: 2;
+                }
+            }
+
+            .graph-container,.compare-graph-container{
+                flex-direction: column;
+        
+                .weather-graph,.currency-graph,.compare-weather-graph,.compare-currency-graph{
+                    width: 100%;
+                }
+
+                .compare-weather-graph{
+                    margin-bottom: 50px;
+                }
+        
+                .weather-graph{
+                    margin-bottom: 50px;
+                }
+        
+            }
+        }
+    }
+
+}

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="trekk.css">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.3.1/css/ol.css" type="text/css">
+    <script src="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.3.1/build/ol.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.bundle.js"></script>
+</head>
+<body>
+    
+    <div class="wrapper">
+
+        <!-- SIDEBAR -->
+        <div class="sidebar">
+
+            <div class="logo">trekk<span>.</span></div>
+
+            <div class="input">
+                <input type="text" class="location-input"  placeholder="Let's go Travel to...">
+
+                <div class="search">
+                    <i class="fas fa-search"></i>
+                </div>
+            </div>
+
+            <!-- SOCIALS -->
+
+            <div class="socials">
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-yelp"></i></a>
+            </div>
+        </div>
+
+
+        <!-- CONTENT SECTION -->
+        <div class="container">
+
+            <!-- DESCRIPTION CONTAINER -->
+            <div class="desc-container">
+
+                <!-- DESCRIPTION -->
+                <div class="description">
+                    <h1 class="heading"></h1>
+                    <p>
+                        <!-- DESCRIPTION GOES HERE -->
+                    </p>
+                    <a class="learn-more" target="_blank">Learn More<i class="fas fa-angle-right"></i></a>
+                </div>
+
+                <!-- IMAGE -->
+                <div class="image">
+                    
+                </div>
+
+            </div>
+
+            <!-- DETAILS CONTAINER -->
+            <div class="details-container">
+
+                <div class="map" id="map">
+                    
+                </div>
+
+                <div class="details">
+                    <p class="heading">things you should know</p>
+                    <ul>
+                        
+                    </ul>
+                </div>
+
+            </div>
+
+
+            <!-- GRAPH CONTAINER -->
+            <div class="graph-container">
+
+                <div class="weather-graph">
+                    <canvas class="weather-chart">
+
+                    </canvas>
+                </div>
+
+                <div class="currency-graph">
+                    <canvas class="currency-chart">
+                        
+                    </canvas>
+                </div>
+
+            </div>
+
+
+            <!-- COMPARE CONTAINER -->
+            <div class="compare">
+                <input type="text" class="compare-input" placeholder="Compare to...">
+                <button class="compare-button">Start Comparing</button>
+                <p class="comparing-to"></p>
+            </div>
+
+            <div class="compare-graph-container">
+                <div class="compare-weather-graph">
+                    <canvas class="compare-weather">
+
+                    </canvas>
+                </div>
+                <div class="compare-currency-graph">
+                    <canvas class="compare-currency">
+                        
+                    </canvas>
+                </div>
+            </div>
+
+            <div class="compare-details-container">
+                <div class="first-city-details">
+                    <p></p>
+                    <ul></ul>
+                </div>
+                <div class="second-city-details">
+                    <p></p>
+                    <ul></ul>
+                </div>
+            </div>
+
+
+        </div>
+
+    </div>
+
+
+    <script src="trekk.js"></script>
+</body>
+</html>
